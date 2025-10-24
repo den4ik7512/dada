@@ -1,0 +1,9 @@
+body { font-family:'Orbitron', sans-serif; background:#0a0a0f; color:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:100vh; margin:0; }
+h1 { text-shadow:0 0 18px #b24bff; }
+#board { display:grid; grid-template-columns:repeat(3,100px); grid-gap:10px; margin-top:20px; }
+.cell { width:100px; height:100px; background:#111; display:flex; align-items:center; justify-content:center; font-size:2.5rem; cursor:pointer; color:#00ff00; transition:0.2s; }
+.cell:hover { background:#222; transform:scale(1.05); }
+#status { font-size:1.4rem; text-shadow:0 0 12px #6cff6c; margin-top:10px; }
+.buttons { display:flex; gap:20px; margin-top:20px; }
+button { padding:12px 22px; border:none; border-radius:10px; font-weight:700; background:linear-gradient(90deg,#6c00ff,#b24bff); color:#fff; cursor:pointer; box-shadow:0 0 14px rgba(178,75,255,0.25); transition:0.2s; }
+button:hover { transform:translateY(-3px); box-shadow:0 0 30px rgba(178,75,255,0.45); }

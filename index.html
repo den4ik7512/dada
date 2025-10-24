@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DarkSikret | Онлайн Крестики-Нолики</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>DarkSikret | Онлайн Крестики-Нолики</h1>
+<p>Создатель: <strong>DarkSikret</strong></p>
+
+<div class="buttons">
+  <button id="createBtn">Создать сервер</button>
+  <button id="joinBtn">Войти на сервер</button>
+</div>
+
+<script>
+document.getElementById('createBtn').onclick = () => {
+  const roomId = Math.floor(1000 + Math.random() * 9000); // случайный код комнаты
+  alert(`Сервер создан! Код комнаты: ${roomId}`);
+  localStorage.setItem('roomId', roomId);
+  localStorage.setItem('creator', 'yes');
+  window.location.href = 'game.html';
+};
+
+document.getElementById('joinBtn').onclick = () => {
+  const roomId = prompt("Введите код комнаты:");
+  if(roomId) {
+    localStorage.setItem('roomId', roomId);
+    localStorage.setItem('creator', 'no');
+    window.location.href = 'game.html';
+  }
+};
+</script>
+</body>
+</html>
